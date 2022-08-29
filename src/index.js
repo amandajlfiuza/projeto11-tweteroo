@@ -29,10 +29,7 @@ server.post('/tweets', (req, res) => {
         return res.status(400).send("Todos os campos são obrigatórios!");
     }
 
-    tweets.push({
-        ...newTweet,
-        id: tweets.length + 1,
-    });
+    tweets.push(newTweet);
     res.status(201).send('OK');
 });
 
